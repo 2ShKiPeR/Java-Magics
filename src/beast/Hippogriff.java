@@ -56,17 +56,16 @@ public class Hippogriff {
         return  age > 2 ? this.name + "can flying" : this.name + "he is very small, can`t flying";
     }
 
-    public String giveRide(Student student) {
+    public void giveRide(Student student) {
         int isGivingRide = new Random().nextInt(1, 10);
         if (1 <= isGivingRide && isGivingRide <= 3) {
-            return student.getName() + "flying on Hippogriff";
+            System.out.println(student.getName() + "летит на Гиппогрифе");
         }
-        if (4 <= isGivingRide && isGivingRide >= 8) {
-            return "Hippogriff say that you idiot";
+        if (4 <= isGivingRide && isGivingRide <= 8) {
+            System.out.println("Гиппогриф смотрит свысока");
         }
         if (isGivingRide == 9 || isGivingRide == 10) {
-            return student.getName() + "Try again";
+            System.out.println("Попробуйте снова");
         }
-    return "false";
     }
 }
